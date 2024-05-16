@@ -50,12 +50,7 @@ public class CocktailController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCocktail(@PathVariable Long id) {
-        cocktailService.deleteAll();
+        cocktailService.deleteCocktail(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }
-    
-    // @DeleteMapping("/all")
-    // public List<Cocktail> deleteAllCocktails() {
-    //     return cocktailService.getAllCocktails();
-    // }
+    } 
 }

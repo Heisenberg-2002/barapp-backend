@@ -2,6 +2,8 @@ package com.example.barappbackend.service;
 
 import java.util.List;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +32,18 @@ public class CocktailService {
     public void deleteAll() {
         cocktailRepository.deleteAll();
     }
+
+    // @Autowired
+    // public void deleteById(Long id) {
+    //     // Vérifie d'abord si le cocktail existe
+    //     Optional<Cocktail> cocktailOptional = cocktailRepository.findById(id);
+    //     if (cocktailOptional.isPresent()) {
+    //         // Supprime le cocktail s'il existe
+    //         cocktailRepository.deleteById(id);
+    //     } else {
+    //         throw new RuntimeException("Cocktail not found with id: " + id);
+    //     }
+    // }
 
 }
 
