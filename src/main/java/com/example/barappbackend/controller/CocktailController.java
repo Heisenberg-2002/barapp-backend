@@ -19,13 +19,13 @@ import com.example.barappbackend.model.Cocktail;
 import com.example.barappbackend.service.CocktailService;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/v1/cocktails")
 public class CocktailController {
 
     @Autowired
     private CocktailService cocktailService;
 
-    @CrossOrigin
     @PostMapping
     public ResponseEntity<Cocktail> createCocktail(@RequestBody Cocktail cocktail) {
         Cocktail createCocktail = cocktailService.saveCocktail(cocktail);
