@@ -23,6 +23,7 @@ public class Cocktail {
     @Column(name = "cocktail_id")
     private Long id;
 
+    @Column(length = 100)
     private String name;
 
     private String description;

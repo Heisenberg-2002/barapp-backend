@@ -18,13 +18,30 @@ public class CocktailService {
         List<Cocktail> cocktails = (List<Cocktail>) cocktailRepository.findAll();
         return cocktails;
     }
-
-    public void deleteAll() {
-        cocktailRepository.deleteAll();
-    }
-
+    
     public Cocktail saveCocktail(Cocktail cocktail) {
         return cocktailRepository.save(cocktail);
     }
     
+    public void deleteCocktail(Long id) {
+        cocktailRepository.deleteById(id);
+    }
+    
+    public void deleteAll() {
+        cocktailRepository.deleteAll();
+    }
+
 }
+
+// public interface CocktailService {
+
+//     Cocktail createCocktail (Cocktail cocktail);
+
+//     List<Cocktail> read();
+
+//     Cocktail updateCocktail(Long id , Cocktail cocktail);
+
+//     String deleteCocktail(Long id);
+
+    
+
