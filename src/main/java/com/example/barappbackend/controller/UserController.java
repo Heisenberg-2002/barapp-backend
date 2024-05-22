@@ -59,16 +59,15 @@ public class UserController {
 
     // Authentifier l'utilisateur
     @PostMapping("/auth")
-    public ResponseEntity<String> authenticateUser(@RequestBody User user) {
+    public ResponseEntity<User> authenticateUser(@RequestBody User user) {
         // Vos identifiants statiques
-        String username = "utilisateur";
-        String password = "motdepasse";
         
         // Vérifier les identifiants de l'utilisateur
         if (user.getUsername().equals("arthur") && user.getPassword().equals("salut")) {
-            return ResponseEntity.ok("L'utilisateur est authentifié avec succès !");
+            user.setToken("bonjour");
+            return ResponseEntity.ok(user);
         } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Identifiants incorrects.");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
     }
 }
