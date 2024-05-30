@@ -41,5 +41,10 @@ private Double prix;
 @Column(name = "quantity")
 private Integer quantity;
 
+public static Object status(int i) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'status'");
+}
+
 
 }
