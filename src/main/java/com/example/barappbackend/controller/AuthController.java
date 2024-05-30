@@ -2,6 +2,7 @@ package com.example.barappbackend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.barappbackend.model.User;
 import com.example.barappbackend.service.UserService;
-
+@Controller
 @CrossOrigin
 @RestController
 @RequestMapping("/v1/auth")
