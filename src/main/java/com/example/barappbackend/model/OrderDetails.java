@@ -29,8 +29,9 @@ private Long orderDetailId;
 @JoinColumn( name = "order_id" , nullable = false)
 private Order order;
 
-@Column(name= "cockatil_id", nullable = false)
-private Long cocktailId;
+@ManyToOne
+@JoinColumn(name= "cocktail_id", nullable = false)
+private Cocktail cocktail;
 
 @Column(name = "taille")
 private String taille;
@@ -44,6 +45,16 @@ private Integer quantity;
 public static Object status(int i) {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'status'");
+}
+
+public Object getCocktailId() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getCocktailId'");
+}
+
+public void setCocktailId(Object cocktailId) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'setCocktailId'");
 }
 
 
